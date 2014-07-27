@@ -10,7 +10,7 @@ BW = logical ([1     1     1     0     0     0     0     0
                1     1     1     0     0     1     1     0
                1     1     1     0     0     0     0     0])
 
-L = bwlabel(BW, 4)  % 4 邻域  % size L = size BW , L 的值为1, 2, 3 ... 分别表示第一个对象，第二个对象，...
+L = bwlabel(BW, 4)  % 4 邻域  % size L = size BW , 矩阵L 的每个元素取值为1, 2, 3 ... 分别表示第一个对象，第二个对象，...
 %  get the row and column coordinates of the object labeled "2"
 [r, c] = find(L==3);
 rc = [r c]
