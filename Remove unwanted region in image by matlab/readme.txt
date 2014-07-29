@@ -1,0 +1,1 @@
+http://stackoverflow.com/questions/22627071/remove-unwanted-region-in-image-by-matlab

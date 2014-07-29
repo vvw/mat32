@@ -7,4 +7,5 @@ numel(bw)
 w = ( c ) / 11 % 总共11 个字，求平均宽度
 zh = bw(:, 1:w)
 imshow(zh);
+find(zh == 1)
 
