@@ -13,3 +13,4 @@ newImg( vertcat( st(toRemove).PixelIdxList ) ) = 0; % remove
 figure,
 subplot(211),imshow(Img);title('‘≠Õº');
 subplot(212),imshow(newImg);title('»•‘Î∫Û');
+
