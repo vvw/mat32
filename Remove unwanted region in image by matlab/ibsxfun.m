@@ -1,7 +1,10 @@
-Img = imread('coins.png');%%// This one is chosen as it is available in MATLAB image library
-Img = im2bw(Img,0.4); %%// 0.4 seemed good to make enough blobs for this image
+%Img = imread('coins.png');%%// This one is chosen as it is available in MATLAB image library
+%Img = im2bw(Img, graythresh(Img)); %%// 0.4 seemed good to make enough blobs for this image
+Img = imread('snowflakes.png');%%// This one is chosen as it is available in MATLAB image library
+Img = im2bw(Img, graythresh(Img)); %%// 0.2 seemed good to make enough blobs for this image
 lb = bwlabel( Img );
-threshold = 2000;
+threshold = 20;
+%threshold = 2000;
 [L,num] = bwlabel( Img );
 counts = sum(bsxfun(@eq,L(:),1:num));
 B1 = bsxfun(@eq,L,permute(find(counts>threshold),[1 3 2]));

@@ -1,7 +1,7 @@
 
 
 Img = imread('snowflakes.png');%%// This one is chosen as it is available in MATLAB image library
-Img = im2bw(Img,0.2); %%// 0.2 seemed good to make enough blobs for this image
+Img = im2bw(Img, graythresh(Img)); %%// 0.2 seemed good to make enough blobs for this image
 threshold = 20;
 lb = bwlabel( Img );
 st = regionprops( lb, 'Area', 'PixelIdxList' );
