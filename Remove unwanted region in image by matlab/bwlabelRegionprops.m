@@ -14,3 +14,5 @@ figure,
 subplot(211),imshow(Img);title('‘≠Õº');
 subplot(212),imshow(newImg);title('»•‘Î∫Û');
 
+
+
