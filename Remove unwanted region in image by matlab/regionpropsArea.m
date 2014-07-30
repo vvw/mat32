@@ -9,7 +9,7 @@ lb = bwlabel( Img );
 stat = regionprops(lb,'Centroid','Area','PixelIdxList');
 [maxValue,index] = max([stat.Area]);
 newImg = Img;
-newImg(stat(index).PixelIdxList)=0;
+newImg(stat(index).PixelIdxList)=0;  % 删除第一个对象
 figure,imshow(newImg);
 
 
