@@ -2,6 +2,7 @@
 x = load('ex2x.dat');
 y = load('ex2y.dat');
 
+
 figure % open a new figure window
 plot(x, y, 'o');
 ylabel('Height in meters')
@@ -9,11 +10,13 @@ xlabel('Age in years')
 
 m = length(y);% y 是列向量，length 求向量的长度。m 是样本数
 x = [ones(m, 1), x]; %add a column of ones to x
-
-theta = zeros(size(x,2),1);
+    % ones 返回全1 的矩阵，第一维是m, 第二维是1, 既m行，1列。
+    % []把两个相同维度的矩阵合二为一，按列合并。
+theta = zeros(size(x,2),1);% size 求矩阵的维度。size(x,2) x 有多少列
 alpha = 0.07;
 
-delta = ones(size(theta),1);
+%delta = ones(size(theta),1);
+delta = ones(1,1);
 
 while abs(max(delta(:))) > 0.00001
   h = sum(x * theta,2);
